@@ -1,0 +1,11 @@
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\bin\Debug\net8.0\MathsLibrary.deps.json
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\bin\Debug\net8.0\MathsLibrary.dll
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\bin\Debug\net8.0\MathsLibrary.pdb
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\obj\Debug\net8.0\MathsLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\obj\Debug\net8.0\MathsLibrary.AssemblyInfoInputs.cache
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\obj\Debug\net8.0\MathsLibrary.AssemblyInfo.cs
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\obj\Debug\net8.0\MathsLibrary.csproj.CoreCompileInputs.cache
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\obj\Debug\net8.0\MathsLibrary.dll
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\obj\Debug\net8.0\refint\MathsLibrary.dll
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\obj\Debug\net8.0\MathsLibrary.pdb
+D:\Sunbeam\Intership\dec-intership\Day4\Day4\MathsLibrary\obj\Debug\net8.0\ref\MathsLibrary.dll
