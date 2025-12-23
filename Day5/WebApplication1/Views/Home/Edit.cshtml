@@ -1,0 +1,42 @@
+﻿@* @model WebApplication1.Models.Student
+
+<html>
+<head>
+
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
+
+</head>
+<form action="/Home/AfterEdit">
+    <table class="table table-bordered">
+
+        <tr>
+            <td><input type="hidden" name="StudentId" value="@Model.StudentId" /></td>
+
+
+            <td>Name</td>
+            <td><input type="text"name="Name" value="@Model.Name" /></td>
+
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="text" name="Age" value="@Model.Age" /></td>
+
+            <td> <input type="submit" value="Update" /> </td>
+
+
+        </tr>
+
+
+
+
+
+
+    </table>
+</form>
+
+
+</html>
+ *@
