@@ -1,0 +1,44 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+script for conditionwise dropdown
+<script>
+    function validateForm() {
+        let valid =
+            $('#courseDropdown').val() &&
+            $('#subjectDropdown').val() &&
+            $('#groupDropdown').val() &&
+            $('#staffDropdown').val() &&
+            $('#ValidFrom').val() &&
+            $('#ValidTo').val();
+
+        $('#submitBtn').prop('disabled', !valid);
+    }
+
+    $('#courseDropdown').change(function () {
+        let courseId = $(this).val();
+
+        $('#subjectDropdown').empty().append('<option value="">-- Select Subject --</option>');
+        $('#groupDropdown').empty().append('<option value="">-- Select Group --</option>');
+
+        if (courseId) {
+            $.get('/Admin/GetSubjectsByCourse', { courseId }, function (data) {
+                $.each(data, function (i, item) {
+                    $('#subjectDropdown').append(
+                        `<option value="${item.subjectId}">${item.subjectName}</option>`
+                    );
+                });
+            });
+
+            $.get('/Admin/GetGroupsByCourse', { courseId }, function (data) {
+                $.each(data, function (i, item) {
+                    $('#groupDropdown').append(
+                        `<option value="${item.courseGroupId}">${item.groupName}</option>`
+                    );
+                });
+            });
+        }
+
+        validateForm();
+    });
+    $('select,input').change(validateForm);
+</script>
