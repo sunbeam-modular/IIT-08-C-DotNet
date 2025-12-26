@@ -1,0 +1,36 @@
+Save ProfileImage in wwwroot and save path in DataBase
+
+
+private async Task<string> SaveProfileImageAsync(IFormFile? profileImage)
+{
+    if (profileImage == null || profileImage.Length == 0)
+        return string.Empty;
+
+    // Generate unique file name
+    var fileName = $"{Guid.NewGuid()}_{profileImage.FileName}";
+    var uploadPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", fileName);
+
+    // Ensure uploads folder exists
+    Directory.CreateDirectory(Path.GetDirectoryName(uploadPath)!);
+
+    // Save file
+    using (var stream = new FileStream(uploadPath, FileMode.Create))
+    {
+        await profileImage.CopyToAsync(stream);
+    }
+
+    // Return relative path to store in DB
+    return $"/uploads/{fileName}";
+
+}
+
+//use
+  string profileImagePath = await SaveProfileImageAsync(model.ProfileImage);
+
+<div class="form-group mb-3">
+    <label asp-for="ProfileImage" class="form-label"></label>
+    <input asp-for="ProfileImage" type="file" class="form-control" />
+    <span asp-validation-for="ProfileImage" class="text-danger"></span>
+</div>
+
+
