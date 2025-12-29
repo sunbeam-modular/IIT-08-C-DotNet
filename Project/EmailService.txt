@@ -1,0 +1,12 @@
+**Step 1: Configure your SMTP settings in `appsettings.json
+
+
+"Smtp": {
+  "Host": "smtp.gmail.com",
+  "Port": 587,
+  "EnableSsl": true,
+  "UserName": "<your email>",
+  "Password": "<app-password>",
+  "FromEmail": "<your-email>,
+  "FromName": "Course Result System"
+}
